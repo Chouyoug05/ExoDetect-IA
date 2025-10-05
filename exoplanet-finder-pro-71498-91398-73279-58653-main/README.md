@@ -186,3 +186,49 @@ Open Source - MIT License
 ## Contribution
 
 Les contributions sont les bienvenues ! Ouvrez une issue ou une PR.
+
+
+## Guide utilisateur (non‑technique)
+
+- Se connecter
+  - Ouvrez l’application. Saisissez votre email et mot de passe, puis Se connecter.
+  - Si vous n’avez pas de compte: Créer un compte, choisissez un avatar (il s’affichera dans votre profil).
+
+- Analyser un fichier de données
+  - Depuis le Tableau de bord, cliquez dans la zone “Téléverser un fichier de données” et sélectionnez un CSV (Kepler/K2/TESS). Patientez quelques secondes.
+  - À la fin, un message de succès apparaît et les résultats s’affichent.
+
+- Comprendre les résultats
+  - Statut IA: Exoplanète / Candidat / Faux positif.
+  - Confiance: de 0 à 1 (plus c’est proche de 1, plus le modèle est confiant).
+  - Explication de l’IA: quelles caractéristiques ont le plus influencé la décision (période, rayon, etc.).
+
+- Habitabilité
+  - Ouvrez “Voir l’habitabilité”. Vous verrez un tableau avec:
+    - Température d’équilibre (K), Rayon (Terre), Gravité (m/s²), Insolation (W/m²), Zone habitable (Oui/Non), Score (0–1).
+  - Texte de synthèse: “Sur X exoplanètes analysées, Y sont potentiellement habitables…”.
+
+- Analyse avancée
+  - Cliquez “Analyse avancée” pour:
+    - Un graphique comparant les meilleurs scores.
+    - Un tableau détaillé (classe de l’étoile, distance, ESI…).
+    - Une Visualisation 3D (étoile au centre, anneaux = orbites, planètes colorées suivant le score).
+    - Légende 3D: code couleur, orbites, contrôles caméra.
+    - Astuce: si la page est vide, utilisez “Recharger les dernières données”.
+
+- Visualisation 3D (rappel)
+  - Rouge (score faible) → Orange → Vert (score élevé).
+  - Survol: affiche Nom, Température, Score.
+  - Clic: panneau détaillé avec plus de paramètres.
+  - Caméra: clic‑droit pour pivoter, molette pour zoomer, glisser pour déplacer.
+
+- Conseils pour vos fichiers CSV
+  - Exportez en CSV standard (UTF‑8). Les lignes commençant par # sont acceptées.
+  - Colonnes typiques TESS/NEA: pl_orbper, pl_rade, pl_eqt, st_teff, st_rad, pl_insol, pl_orbsmax, disposition.
+  - Si une colonne manque, la plateforme tente un alias ou ignore la ligne.
+
+- Dépannage rapide (utilisateur)
+  - “Impossible de se connecter au serveur”: vérifiez que l’API est en ligne.
+  - “CSV invalide”: réexportez en CSV simple; évitez les colonnes très hétérogènes ou les séparateurs exotiques.
+  - “Rien en 3D”: refaites une analyse, puis “Analyse avancée” → “Recharger les dernières données”.
+

@@ -203,11 +203,9 @@ const Index = () => {
                   </span>
                 </div>
                 
-                <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-                  Découvrez de<br />
-                  <span className="bg-gradient-primary bg-clip-text text-transparent">
-                    nouveaux mondes
-                  </span>
+                <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight text-center mx-auto max-w-4xl">
+                  Découvrez de nouveaux mondes
+                  <span className="bg-gradient-primary bg-clip-text text-transparent"> grâce à l'intelligence artificielle</span>
                 </h2>
                 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

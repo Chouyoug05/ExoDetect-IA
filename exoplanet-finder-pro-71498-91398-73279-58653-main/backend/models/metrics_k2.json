@@ -1,0 +1,35 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      52,
+      0,
+      0
+    ],
+    [
+      0,
+      962,
+      0
+    ],
+    [
+      0,
+      0,
+      1952
+    ]
+  ],
+  "labels_order": [
+    -1,
+    0,
+    1
+  ],
+  "labels_names": [
+    "FALSE POSITIVE",
+    "CANDIDATE",
+    "CONFIRMED"
+  ],
+  "rows": 2966,
+  "features": [
+    "koi_period",
+    "koi_prad"
+  ]
+}

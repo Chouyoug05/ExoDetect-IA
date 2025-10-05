@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Deep space noir theme - Ultra dark */
+    --background: 222 47% 3%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 45% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 5%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Electric cyan accents */
+    --primary: 186 100% 55%;
+    --primary-foreground: 222 47% 3%;
+    
+    --primary-glow: 186 100% 70%;
+
+    --secondary: 222 40% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 222 35% 10%;
+    --muted-foreground: 217 10% 50%;
+
+    --accent: 186 95% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Enhanced status colors */
+    --success: 142 86% 45%;
+    --success-foreground: 210 40% 98%;
+    
+    --warning: 45 100% 55%;
+    --warning-foreground: 222 47% 3%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 40% 15%;
+    --input: 222 40% 12%;
+    --ring: 186 100% 55%;
+
+    --radius: 1rem;
+
+    /* Premium gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(222 47% 3%) 0%, hsl(228 45% 6%) 50%, hsl(222 47% 3%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(186 100% 55%) 0%, hsl(186 100% 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222 45% 6%) 0%, hsl(222 40% 4%) 100%);
+    --gradient-mesh: radial-gradient(at 0% 0%, hsl(186 100% 20% / 0.15) 0%, transparent 50%),
+                     radial-gradient(at 100% 100%, hsl(245 60% 20% / 0.15) 0%, transparent 50%);
+    
+    /* Enhanced glowing effects */
+    --glow-primary: 0 0 40px hsl(186 100% 55% / 0.6), 0 0 80px hsl(186 100% 55% / 0.3);
+    --glow-success: 0 0 30px hsl(142 86% 45% / 0.5);
+    --glow-warning: 0 0 30px hsl(45 100% 55% / 0.5);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    /* Smooth animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: var(--gradient-cosmic);
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: var(--gradient-mesh);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  
+  .glow-success {
+    box-shadow: var(--glow-success);
+  }
+  
+  .glow-warning {
+    box-shadow: var(--glow-warning);
+  }
+  
+  .gradient-cosmic {
+    background: var(--gradient-cosmic);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-glass);
+  }
+  
+  .glass-border {
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}

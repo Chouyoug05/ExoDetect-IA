@@ -1,0 +1,38 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      2999,
+      0,
+      0
+    ],
+    [
+      0,
+      1814,
+      0
+    ],
+    [
+      0,
+      0,
+      2738
+    ]
+  ],
+  "labels_order": [
+    -1,
+    0,
+    1
+  ],
+  "labels_names": [
+    "FALSE POSITIVE",
+    "CANDIDATE",
+    "CONFIRMED"
+  ],
+  "auc_micro_ovr": 1.0,
+  "rows": 7551,
+  "features": [
+    "koi_period",
+    "koi_duration",
+    "koi_depth",
+    "koi_prad"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "features": [
+    "koi_period",
+    "koi_duration",
+    "koi_depth",
+    "koi_prad"
+  ],
+  "stats": {
+    "koi_period": {
+      "median": 10.2090268,
+      "min": 0.241842544,
+      "max": 988.8811177,
+      "clip_min": 0.529803912,
+      "clip_max": 554.71357
+    },
+    "koi_duration": {
+      "median": 3.6138,
+      "min": 0.052,
+      "max": 138.54,
+      "clip_min": 0.77835,
+      "clip_max": 27.575
+    },
+    "koi_depth": {
+      "median": 308.3,
+      "min": 0.0,
+      "max": 203490.0,
+      "clip_min": 22.25,
+      "clip_max": 50413.5
+    },
+    "koi_prad": {
+      "median": 1.98,
+      "min": 0.08,
+      "max": 30.0,
+      "clip_min": 0.49,
+      "clip_max": 28.585
+    }
+  }
+}
